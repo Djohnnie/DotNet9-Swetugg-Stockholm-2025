@@ -1,6 +1,8 @@
 ﻿
+var dataBuffer = new Buffer<int>(10);
+dataBuffer[^1] = 1;
 
-var buffer = new Buffer10
+var buffer = new Buffer<int>(10)
 {
     [^1] = 1,
     [^2] = 2,
@@ -14,25 +16,30 @@ var buffer = new Buffer10
     [^10] = 10
 };
 
-for (int i = 0; i < buffer.Length; i++)
-{
-    Console.WriteLine(buffer[i]);
-}
 
 Console.ReadKey();
 
 
-struct Buffer10
+public class Buffer<T>
 {
-    private int[] _buffer = new int[10];
+    private T[] buffer;
 
-    public Buffer10() { }
-
-    public int Length => _buffer.Length;
-
-    public int this[int x]
+    public Buffer(int size)
     {
-        get => _buffer[x];
-        set { _buffer[x] = value; }
+        buffer = new T[size];
+    }
+
+    public T this[Index index]
+    {
+        get => buffer[index];
+        set => buffer[index] = value;
+    }
+
+    public void Print()
+    {
+        for (int i = 0; i < buffer.Length; i++)
+        {
+            Console.WriteLine($"[{i}] = {buffer[i]}");
+        }
     }
 }

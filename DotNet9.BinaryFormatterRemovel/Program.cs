@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 #pragma warning disable SYSLIB0011 // Type or member is obsolete

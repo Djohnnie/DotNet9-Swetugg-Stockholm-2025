@@ -16,6 +16,7 @@ public class Test
         Console.WriteLine("Test(Apple apple)");
     }
 
+    [ActivatorUtilitiesConstructor]
     public Test()
     {
         Console.WriteLine("Test()");
@@ -27,12 +28,12 @@ public class Test
     }
 }
 
-public class Apple()
+public class Apple
 {
 
 }
 
-public class Banana()
+public class Banana
 {
 
 }

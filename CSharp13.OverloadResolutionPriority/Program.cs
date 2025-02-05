@@ -3,6 +3,8 @@
 
 X.DoSomething(1, 2, 3, 4, 5);
 Y.DoSomething(1, 2, 3, 4, 5);
+X.DoSomething([1, 2, 3, 4, 5]);
+Y.DoSomething([1, 2, 3, 4, 5]);
 
 
 public class X
